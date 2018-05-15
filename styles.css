@@ -1,0 +1,51 @@
+header {
+    color: #ff6f69;
+    font-family: "Glass Antiqua", serif;
+    font-size:36px;
+    font-weight: 900;
+    text-shadow: 4px 4px 4px #FFFFFF;
+    margin: 0 auto;
+    padding-left: 5px;
+    border-bottom: 4px solid grey;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    font-family: 'Cormorant', serif;
+    background-color: #E6F6F4;
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border: 20px double #1C9F9C;
+}
+
+a {
+    color: #FBD468;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    header {
+        font-size: 48px;
+        width: 300px;
+    }
+
+}
