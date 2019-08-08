@@ -1,19 +1,18 @@
 "use strict";
 
 $(document).ready(() => {
-    $.get('https://www.reddit.com/r/vintageads.json', (data) => {
-        let children = data.data.children.slice(0, 10);
+    $.get('https://www.reddit.com/r/vintageads.json', (data) => {        
+        let children = data.data.children.slice(0, 20);
         for (let i = 0; i < children.length; i++) {
-            let children = data.data.children;
-            let title = data.data.children[i].data.title;
-            let link = data.data.children[i].data.permalink;
-            let picture = data.data.children[i].data.thumbnail;
-            let promise = $.get('https://www.reddit.com/r/vintageads.json');
-                promise.then((responseData) => {
-                $(".container").append("<p>" + title + "</p>");
+            let allImages = data.data.children;
+            let title = allImages[i].data.title;
+            let link = allImages[i].data.permalink;
+            let picture = allImages[i].data.thumbnail;
+            
+            if (picture !== 'self' && picture !== undefined && picture !== null) {
                 $(".container").append("<img src=" + picture + ">"); 
-                $(".container").append("<br> <a href="+ "https://reddit.com" + link + " <p> Link </p> </a>");
-                })
+                $(".container").append("<br> <a href="+ "https://reddit.com" + link + " <p>" + title + "</p> </a>");
+            }
         }
     });
 });

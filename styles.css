@@ -31,21 +31,7 @@ img {
 }
 
 a {
-    color: #FBD468;
+    color: darkslategray;
     font-weight: 900;
     text-decoration: none;
-}
-
-@media only screen and (min-width: 768px) {
-
-    img {
-        height: 250px;
-        width: 250px;
-    }
-
-    header {
-        font-size: 48px;
-        width: 300px;
-    }
-
 }
